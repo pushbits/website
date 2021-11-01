@@ -1,0 +1,32 @@
+{{ define "content" }}
+
+{{ $service1_link := "https://github.com/pushbits/server" }}
+{{ $service1 := dict "icon" "fab fa-github"   "href" $service1_link "text" "GitHub" }}
+
+{{ $service2_link := "./api" }}
+{{ $service2 := dict "icon" "fas fa-cogs"     "href" $service2_link "text" "API" }}
+
+{{ $service3_link := "https://github.com/pushbits/server/discussions" }}
+{{ $service3 := dict "icon" "fas fa-comments" "href" $service3_link "text" "Discussions" }}
+
+{{ $service4_link := "https://www.eiken.dev/" }}
+{{ $service4 := dict "icon" "fas fa-envelope" "href" $service4_link "text" "Contact" }}
+
+{{ $services := slice $service1 $service2 $service3 $service4 }}
+
+<div id="content" class="p-3">
+	<img src="{{ "img/logo.svg" | absURL }}" alt="Profile picture" class="mx-auto my-4" />
+	<h1 class="text-center">{{ .Params.heading }}</h1>
+	<div class="lead">
+		{{ with .Content }}
+		{{ . }}
+		{{ end }}
+	</div>
+	<div class="container-fluid d-flex flex-row flex-wrap justify-content-center align-items-center mx-auto my-4">
+		{{ range $services }}
+		<a href="{{ .href }}" class="border rounded btn-contact"><div class="d-flex flex-row justify-content-center align-items-center"><i class="{{ .icon }} me-2" style="vertical-align: middle;"></i><span>{{ .text }}</span></div></a>
+		{{ end }}
+	</div>
+</div>
+
+{{ end }}

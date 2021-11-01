@@ -1,0 +1,21 @@
+baseURL = "https://www.pushbits.io/"
+languageCode = "en-us"
+title = "PushBits"
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
+
+# Do not include any taxonomies in sitemap.
+[taxonomies]
+
+[params]
+	title = "PushBits"
+	author = "The PushBits Developers"
+	description = "A relay server for push notifications via Matrix (and a minimalistic alternative to Pushover and Gotify with a strong focus on security)"
+	keywords = "matrix, notification, gotify"
+	images = ["/img/card.png"]
+
+# https://gohugo.io/templates/sitemap-template/
+[sitemap]
+	changefreq = "monthly"
+	filename = "sitemap.xml"
+	priority = 0.5

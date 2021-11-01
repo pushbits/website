@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-us{{ end }}" dir="ltr" class="h-100" itemscope itemtype="http://schema.org/WebPage">
+	<head>
+		{{- partial "head.html" . -}}
+	</head>
+
+	<body class="d-flex flex-column justify-content-center align-items-center">
+		{{- block "content" . }}{{- end }}
+
+		{{- partial "scripts.html" . -}}
+	</body>
+</html>
