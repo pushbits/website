@@ -17,7 +17,7 @@
 <div id="content" class="p-3">
 	<img src="{{ "img/logo.svg" | absURL }}" alt="Profile picture" class="mx-auto my-4" />
 	<h1 class="text-center">{{ .Params.heading }}</h1>
-	<div class="lead">
+	<div class="lead text-center">
 		{{ with .Content }}
 		{{ . }}
 		{{ end }}
