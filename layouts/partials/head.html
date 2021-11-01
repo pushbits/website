@@ -29,4 +29,4 @@
 
 {{ $options := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules")) }}
 {{ $style := resources.Get "css/main.scss" | toCSS $options | postCSS (dict "config" "./assets/css/postcss.config.js") | fingerprint "sha384" }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+<link rel="stylesheet" href="{{ $style.Permalink }}">
