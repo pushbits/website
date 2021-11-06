@@ -3,14 +3,17 @@
 {{ $service1_link := "https://github.com/pushbits/server" }}
 {{ $service1 := dict "icon" "fab fa-github"   "href" $service1_link "text" "GitHub" }}
 
-{{ $service2_link := "./api" }}
-{{ $service2 := dict "icon" "fas fa-cogs"     "href" $service2_link "text" "API" }}
+{{ $service2_link := "./docs" }}
+{{ $service2 := dict "icon" "fas fa-book"     "href" $service2_link "text" "Docs" }}
 
-{{ $service3_link := "https://github.com/pushbits/server/discussions" }}
-{{ $service3 := dict "icon" "fas fa-comments" "href" $service3_link "text" "Discussions" }}
+{{ $service3_link := "./api" }}
+{{ $service3 := dict "icon" "fas fa-cogs"     "href" $service3_link "text" "API" }}
 
-{{ $service4_link := "https://www.eiken.dev/" }}
-{{ $service4 := dict "icon" "fas fa-envelope" "href" $service4_link "text" "Contact" }}
+{{ $service4_link := "https://github.com/pushbits/server/discussions" }}
+{{ $service4 := dict "icon" "fas fa-comments" "href" $service4_link "text" "Discussions" }}
+
+{{ $service5_link := "https://www.eiken.dev/" }}
+{{ $service5 := dict "icon" "fas fa-envelope" "href" $service5_link "text" "Contact" }}
 
 {{ $services := slice $service1 $service2 $service3 $service4 }}
 
