@@ -9,6 +9,43 @@ You are advised to install PushBits behind a reverse proxy and enable TLS.
 Currently, the only supported way of installing PushBits is via [Docker](https://www.docker.com/) or [Podman](https://podman.io/).
 The image is hosted [via ghcr.io](https://github.com/pushbits/server/pkgs/container/server).
 
+### UNSUPPORTED: Install on Fedora Linux
+This method was tested on a Fedora Linux LXC Container running on Proxmox. They could probably work for other Linux distros.
+
+1- Install sqlite.
+```
+sudo dnf install sqlite
+```
+2- Create a user.
+```
+sudo adduser pushbits
+```
+3- Move to the user directory
+
+4- Download Pushbits and the Pushbits cli, and extract them in the user directory.
+
+5- Copy the sample configuration, and edit it to fit your needs.
+
+6- Start the server and test it.
+
+7- Here is a simple Systemd unit for the new service. You can use it to start the server on boot, and to control it with Systemd.
+
+```
+[Unit]
+Description=Pushbits notification server
+After=network.target
+
+[Service]
+User=pushbits
+Type=simple
+WorkingDirectory=/home/pushbits
+ExecStart=/home/pushbits/server
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target
+```
+
 ## Configuration
 
 To see what can be configured, have a look at the [config.sample.yml](https://github.com/pushbits/server/blob/master/config.example.yml) file inside the root of the repository.
