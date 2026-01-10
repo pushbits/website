@@ -1,6 +1,6 @@
 site_name: PushBits
 
-site_url: https://www.pushbits.io/docs/
+site_url: https://pushbits.github.io/docs/
 
 nav:
     - Getting Started: index.md
@@ -33,7 +33,7 @@ theme:
     - header.autohide
 
 extra:
-  homepage: https://www.pushbits.io/
+  homepage: https://pushbits.github.io/
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/eikendev

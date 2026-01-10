@@ -1,5 +1,5 @@
 {
-	"name": "pushbits.io",
+	"name": "pushbits.github.io",
 	"version": "0.0.1",
 	"description": "A relay server for push notifications via Matrix",
 	"main": "index.js",

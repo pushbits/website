@@ -9,10 +9,6 @@
 {{- template "_internal/schema.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}
 
-{{ with .Site.Social.twitter -}}
-<meta name="twitter:creator" content="@{{ . }}"/>
-{{ end -}}
-
 <title>{{ $.Site.Title }}</title>
 
 <link rel="canonical" href="{{ .Permalink }}">

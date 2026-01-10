@@ -1,4 +1,4 @@
-baseURL = "https://www.pushbits.io/"
+baseURL = "https://pushbits.github.io/"
 languageCode = "en-us"
 title = "PushBits"
 disableHugoGeneratorInject = true
